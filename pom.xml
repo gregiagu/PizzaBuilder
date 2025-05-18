@@ -4,16 +4,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.github.gregiagu.pizza.builder</groupId>
-  <artifactId>ss</artifactId>
+  <artifactId>PizzaBuilde</artifactId>
   <version>0.0.0</version>
 
   <name>ss</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>17</maven.compiler.release>
+    <maven.compiler.release>24</maven.compiler.release>
   </properties>
 
   <dependencyManagement>
