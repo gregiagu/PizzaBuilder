@@ -4,10 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.github.gregiagu.pizza.builder</groupId>
-  <artifactId>PizzaBuilde</artifactId>
+  <artifactId>PizzaBuilder</artifactId>
   <version>0.0.0</version>
 
-  <name>ss</name>
+  <name>PizzaBuilder</name>
   <!-- FIXME change it to the project's website -->
 
   <properties>
