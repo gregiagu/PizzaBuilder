@@ -4,6 +4,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class PizzaTest {
@@ -13,9 +16,28 @@ public class PizzaTest {
      */
     @Test
     void mockPizzaTest() {
-        String t = "A flavoured topping";
+        List<String> igs = Arrays.asList("Peperoni", "Cheese", "Tomato sauce");
+
+        Topping t = new Topping() {
+
+            @Override
+            public List<String> getIgredients() {
+                return igs;
+            }
+        };
+
+        Pizza pt = new Pizza() {
+
+            private Topping topping = t;;
+
+            @Override
+            public Topping getToppings() {
+                return this.topping;
+            }
+
+        };
         Pizza pizzaMock = mock(Pizza.class);
-        when(pizzaMock.getToppins()).thenReturn(t);
-        assertThat(pizzaMock.getToppins()).isNotBlank().isEqualTo(t);
+        when(pizzaMock.getToppings()).thenReturn(t);
+        assertThat(pizzaMock.getToppings()).isEqualTo(t);
     }
 }

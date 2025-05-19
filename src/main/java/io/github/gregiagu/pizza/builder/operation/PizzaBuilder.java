@@ -1,24 +1,17 @@
 package io.github.gregiagu.pizza.builder.operation;
 
 import io.github.gregiagu.pizza.builder.common.Pizza;
+import io.github.gregiagu.pizza.builder.common.Topping;
 
 public class PizzaBuilder {
 
-    protected String t = "";
+    protected Topping t = null;
 
     public Pizza build() {
-        return new Pizza() {
-
-            private String topping = t;
-            @Override
-            public String getToppins() {
-                return topping;
-            }
-            
-        };
+        return new PizzaImpl(t);
     }
 
-    public PizzaBuilder withTopping(String t) {
+    public PizzaBuilder withTopping(Topping t) {
         this.t = t;
         return this;
     }
